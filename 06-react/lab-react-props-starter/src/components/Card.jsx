@@ -1,7 +1,11 @@
-// function Card(props) {
-function Card({id, content, title}) {
+
+function Card({content, title}) {
+  const clickHandler = () => {
+    console.log(`${title}: ${content}`);
+  }
+
   return (
-    <div className="card">
+    <div className="card" onClick={clickHandler}>
       <div className="card__content">{content}</div>
       <h4 className="card__title">{title}</h4>
     </div>

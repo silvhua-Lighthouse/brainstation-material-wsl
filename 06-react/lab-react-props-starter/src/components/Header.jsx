@@ -1,6 +1,5 @@
 
 const Header = (prop) => {
-  console.log('prop', prop)
   return (
     <header className="header">
       <nav className="header__links header__links--left">

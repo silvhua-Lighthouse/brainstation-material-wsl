@@ -1,5 +1,6 @@
 import Header from "./components/Header";
 import CardList from "./components/CardList";
+import CardForm from "./components/CardForm";
 
 const logo = 'LogoName'
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <>
       <Header logo={logo}/>
       <CardList />
+      <CardForm />
     </>
   );
 }
