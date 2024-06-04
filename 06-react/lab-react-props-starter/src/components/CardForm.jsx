@@ -1,7 +1,11 @@
-const CardForm = () => {
+const CardForm = (props) => {
+    
     const submitHandler = (event) => {
         event.preventDefault();
-        console.log(`Title: ${event.target.title.value}\nContent: ${event.target.content.value}`);
+        const newTitle = event.target.title.value;
+        const newContent = event.target.content.value;
+        props.addCardHandler(newContent, newTitle);
+        console.log(`Title: ${newTitle}\nContent: ${newContent}`);
     }
     return (
         <form onSubmit={submitHandler}>
