@@ -1,5 +1,6 @@
 // import './ProductsPage.scss';
 import products from '../../data/products.json'
+import { Link } from 'react-router-dom'
 
 const ProductsPage = () => {
   
@@ -10,7 +11,7 @@ const ProductsPage = () => {
       products.map( product => {
         return (
           <li key={product.id}>
-            {product.name}
+            <Link to={`/products/${product.id}`}>{product.name}</Link>
           </li>
         )
       })
