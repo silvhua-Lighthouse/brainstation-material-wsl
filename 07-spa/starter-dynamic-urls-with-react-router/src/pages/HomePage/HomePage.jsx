@@ -1,10 +1,11 @@
-// import './HomePage.scss';
+import './HomePage.scss';
 
-const HomePage = () => {
+const HomePage = ({username}) => {
 
     return (
         <>
         <h1>Home Page</h1>
+        <p>Hi, <b>{username}</b>. Welcome.</p>
         </>
     )
 }

@@ -1,0 +1,13 @@
+a {
+    color: pink;
+    // background-color: yellow;
+    font-family:'Courier New', Courier, monospace;
+    
+    &:active {
+        background-color: pink;
+    }
+}
+
+.active {
+    background-color: wheat;
+}
