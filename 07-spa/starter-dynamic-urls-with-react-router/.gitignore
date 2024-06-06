@@ -22,9 +22,3 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-**/*.css.map
-**/*Zone.Identifier
-
-example-app/
-**/*demo*
-**/*review*

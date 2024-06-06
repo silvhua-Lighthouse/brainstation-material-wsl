@@ -1,0 +1,29 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  color: #212121;
+}
+
+p,
+ul {
+  line-height: 1.5;
+}
+
+a {
+  color: #1358d8;
+  margin-right: 0.5rem;
+}
+
+a.active {
+  color: black;
+}
+
+header {
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #ccc;
+}

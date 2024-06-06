@@ -13,7 +13,7 @@ function CardList(props) {
       {/* replace the card below by using the Array .map method */}
       {/* <Card cardArray={cardArray[0]}/> */}
       {
-        cardArray.map(card => <Card key={card.id} content={card.content} title={card.title}/>)
+        cardArray.map(card => {return <Card key={card.id} content={card.content} title={card.title}/>})
       }
       
     </section>
