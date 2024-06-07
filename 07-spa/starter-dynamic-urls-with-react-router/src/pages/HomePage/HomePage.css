@@ -1,0 +1,11 @@
+a {
+  color: pink;
+  font-family: "Courier New", Courier, monospace;
+}
+a:active {
+  background-color: pink;
+}
+
+.active {
+  background-color: wheat;
+}/*# sourceMappingURL=HomePage.css.map */
