@@ -20,11 +20,12 @@ function CommentList() {
     }
     fetchComments();
   }, []);
+  console.log(commentsArray);
 
   return (
     <div>
       {commentsArray.map((comment) => {
-        return <Comment name={comment.name} comment={comment.comment} />;
+        return <Comment key={comment.id} name={comment.name} comment={comment.comment} />;
       })}
     </div>
   );

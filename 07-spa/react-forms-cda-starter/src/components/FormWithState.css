@@ -1,0 +1,22 @@
+.form__input {
+  border: 2px solid black;
+}
+
+.form__input--invalid {
+  border-color: red;
+  animation: shakeItUp 0.25s;
+}
+
+@keyframes shakeItUp {
+  0% {
+    transform: translateX(-20px);
+  }
+
+  50% {
+    transform: translateX(20px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
