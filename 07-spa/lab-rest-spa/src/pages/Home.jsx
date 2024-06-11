@@ -5,6 +5,7 @@ import { useEffect } from 'react';
 
 const Home = () => {
   const [moviesArray, setMoviesArray] = useState(null)
+  
   const fetchMovies = async () => {
     const response = await apiInstance.getMovies();
     console.log('API getMovies response\n', response)
@@ -21,7 +22,7 @@ const Home = () => {
 
   return (
     <section>
-        {moviesArray.map( movie => <p>{movie.original_title}</p>)}
+        {moviesArray.map( movie => <p key={movie.id}>{movie.original_title}</p>)}
     </section>
   )
 }
