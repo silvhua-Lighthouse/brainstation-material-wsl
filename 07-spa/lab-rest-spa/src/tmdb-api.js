@@ -33,7 +33,7 @@ export class TmdbApi {
   async getMovies() {
     /* https://developer.themoviedb.org/reference/discover-movie */
     const response = await this.get('discover/movie')
-    return response.results;
+    return response?.results || false;
   }
   
   logResponse(response) {
