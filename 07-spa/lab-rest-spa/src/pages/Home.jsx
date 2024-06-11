@@ -4,7 +4,7 @@ import apiInstance from "../tmdb-api";
 import { useEffect } from 'react';
 
 const Home = () => {
-  const [moviesArray, setMoviesArray] = useState(0)
+  const [moviesArray, setMoviesArray] = useState(null)
   const fetchMovies = async () => {
     const response = await apiInstance.getMovies();
     console.log('API getMovies response\n', response)
@@ -15,9 +15,13 @@ const Home = () => {
     fetchMovies()
   }, []);
 
+  if (!moviesArray) {
+    return <section>Loading</section>
+  };
+
   return (
     <section>
-      {moviesArray[0].original}
+        {moviesArray.map( movie => <p>{movie.original_title}</p>)}
     </section>
   )
 }

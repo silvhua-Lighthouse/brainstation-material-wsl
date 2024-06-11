@@ -14,12 +14,6 @@ export class TmdbApi {
     }
   }
   
-  createRequestUrl(endpoint) {
-    const requestUrl = `${this.baseUrl}${endpoint}`;
-    console.log('requestUrl', requestUrl);
-    return requestUrl;
-  }
-  
   logResponse(response) {
     // Helper method to perform console.log() on API response objects.
     console.log(`API response status ${response.status}: ${response.statusText}.`)
@@ -28,7 +22,8 @@ export class TmdbApi {
   async get(endpoint) {
     /* Helper method for making GET requests (following DRY principle). 
     Called upon by the `.getComments()` and `.getShows()` methods. */
-    const requestUrl = this.createRequestUrl(endpoint);
+    const requestUrl = `${this.baseUrl}${endpoint}`;
+    console.log('requestUrl', requestUrl);
     try {
 
       const response = await axios.get(requestUrl, this.options)
