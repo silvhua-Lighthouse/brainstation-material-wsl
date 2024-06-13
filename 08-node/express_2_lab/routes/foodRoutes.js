@@ -17,5 +17,4 @@ router.get('/salads', (req, res, next) => {
   res.json(salads);
 })
 
-
 export default router;
